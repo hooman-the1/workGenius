@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'workgenius';
+  listLoaded = true;
+  listItems = ["user1", "user2", "user3", "user4",
+  "user1", "user2", "user3", "user4",
+  "user1", "user2", "user3", "user4",
+  "user1", "user2", "user3", "user4",
+  "user1", "user2", "user3", "user4",
+  "user1", "user2", "user3", "user4",
+  "user1", "user2", "user3", "user4",
+  "user1", "user2", "user3", "user4",]
 }

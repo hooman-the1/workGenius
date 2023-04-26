@@ -1,0 +1,15 @@
+nb-card{
+    max-height: 90vh;
+}
+
+nb-list-item:first-child{
+    border-top: 0px;
+}
+
+nb-list-item:last-child{
+    border-bottom: 0px;
+}
+
+nb-card-header{
+    font-size: 22px;
+}
