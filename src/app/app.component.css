@@ -13,3 +13,7 @@ nb-list-item:last-child{
 nb-card-header{
     font-size: 22px;
 }
+
+nb-card-footer{
+    text-align: right;
+}
