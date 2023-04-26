@@ -1,18 +1,31 @@
 <nb-layout>
   <nb-layout-column>
-    <nb-card status="success">
-      <nb-card-header>List of images</nb-card-header>
-      <nb-card-body>
-        <h3 *ngIf="listLoaded === true && listItems.length === 0"></h3>
-        <nb-list *ngIf="listLoaded === true && listItems.length !== 0">
-          <nb-list-item *ngFor="let item of listItems">
-            {{item}}
-          </nb-list-item>
-        </nb-list>
-      </nb-card-body>
-      <nb-card-footer>
-        <button nbButton outline status="success">Add image</button>
-      </nb-card-footer>
-    </nb-card>
+        <h2>Image List</h2>
+        <h3 *ngIf="listLoaded === true && listItems.length === 0">No image exists!</h3>
+        <nb-card status="success" *ngIf="listLoaded === true && listItems.length !== 0">
+          <nb-card-header>
+            <div class="row list-header p-1">
+              <h6 class="col">Name</h6>
+              <h6 class="col">Alt</h6>
+              <h6 class="col">Description</h6>
+              <h6 class="col"></h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <nb-list class="row">
+              <nb-list-item *ngFor="let item of listItems; index as index">
+                <div class="col">{{item.name}}</div>
+                <div class="col">{{item.alt}}</div>
+                <div class="col">{{item.description}}</div>
+                <div class="col">
+                  <nb-icon icon="eye-outline" status="primary" class="center" (click)="show(item.id)"></nb-icon>
+                </div>
+              </nb-list-item>
+            </nb-list>
+          </nb-card-body>
+          <nb-card-footer>
+            <button nbButton outline status="success">Add image</button>
+          </nb-card-footer>
+        </nb-card>
   </nb-layout-column>
 </nb-layout>

@@ -1,5 +1,5 @@
 nb-card{
-    max-height: 90vh;
+    max-height: 80vh;
 }
 
 nb-list-item:first-child{
@@ -16,4 +16,19 @@ nb-card-header{
 
 nb-card-footer{
     text-align: right;
+}
+
+.list-header{
+    background-color: rgba(0,214,143,0.200);
+}
+
+h6{
+    padding-left: 0rem;
+}
+
+nb-icon{
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 28px;
 }
